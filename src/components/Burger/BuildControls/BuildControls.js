@@ -30,8 +30,10 @@ const buildControls = (props) => (
          onClick={props.ordered}>
           ORDER NOW
       </button>
-      <button className={classes.OrderButton}>
-          RESET
+      <button className={classes.OrderButton}
+         onClick={props.reset}  
+      >
+          RESET ORDER
       </button>
 
     </div>

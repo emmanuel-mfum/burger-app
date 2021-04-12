@@ -3,11 +3,11 @@ import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component{
-  // We used these lifecycles hooks in order to make sure that we don't unncessarily render the Order Summary.
+  // We used these lifecycles hooks in order to make sure that we don't unnecessarily render the Order Summary.
   // To achieve that, we just converted the Model component into a class-based component iwth a Should Component update
   // which check to see if the state has indeed changed before updating.
   shouldComponentUpdate(nextProps, nextState){
-          return nextProps.show !== this.props.show;
+          return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
      
   }
 
